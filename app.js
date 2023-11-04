@@ -2,6 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 
 app.get('/get-assets', async (req, res) => {
     const websiteURL = req.query.url;
